@@ -10,7 +10,7 @@ import pandas as pd
 #print(os.listdir())
 
 # Unzipping the files
-with zipfile.ZipFile('indexNumber.zip', 'r') as zf:
+with zipfile.ZipFile('../../dataset/indexNumber.zip', 'r') as zf:
     zf.extractall(os.getcwd())
 #print(os.listdir())
 
