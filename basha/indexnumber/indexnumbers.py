@@ -20,7 +20,7 @@ s_df = s_df.drop('Unnamed: 0', axis=1)
 t_df = pd.read_csv('TargetDF.csv', nrows=19, low_memory=False)
 t_df = t_df.drop('Unnamed: 0', axis=1)
 
-# function for preprocessing cleaning the irrelevant part extract the common part in source data (-cpe23Uri
+# function for preprocessing Replace the substring with another string(replace characters) in source data (-cpe23Uri)
 def s_preprocess(text):
     s1 = "".join(text.split('\\'))
     s2 = "".join(s1.split('/'))
@@ -31,7 +31,7 @@ def s_preprocess(text):
     return s.lower()
 #print(s_preprocess(s_df['cpe23Uri'].tolist()[0]))
 
-# function for preprocessing cleaning the irrelevant part extract the common part in Target data(“CPEMatchString” )
+# function for preprocessing Replace the substring with another string(replace characters)Target data(“CPEMatchString” )
 def t_preprocess(text):
     s1 = "".join(text.split('\\'))
     s2 = "".join(s1.split('/'))
