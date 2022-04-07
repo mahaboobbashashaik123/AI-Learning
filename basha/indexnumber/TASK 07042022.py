@@ -150,4 +150,4 @@ def countplot_online(func):
 @distplot_income
 @distplot_age
 def displot():
-    print("displot")
+    print("univarite plots")
