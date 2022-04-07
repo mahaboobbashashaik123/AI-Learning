@@ -67,13 +67,9 @@ counts
 
 #Now checking with  no of customers  having zero mortage,zero personal loan ,zero securities account ,Cd account ,credit card,education,online
 df[df['Mortgage']==0]['Mortgage'].value_counts()
-df[df['CCAvg']==0]['CCAvg'].value_counts() #106 customers are not spending credit card per month
+df[df['CCAvg']==0]['CCAvg'].value_counts()
 
 df['Family'].value_counts()
-#1472 customers -Family size is 1
-#1296 customers - family size is 2
-#1222 customers -familysize is 4
-#1010 customers - familysize is 3
 df['Securities Account'].value_counts()
 df['CD Account'].value_counts()
 df['Online'].value_counts()
