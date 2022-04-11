@@ -244,4 +244,26 @@ plt.title('creditcard Percentage')
 plt.show()
 #Based on above pie chart 9.6% only buying personal loan
 
+#Splitting of data into train and test
+from sklearn.model_selection import train_test_split
+X_train,X_test,Y_train,Y_test = train_test_split(X,Y,test_size = 0.3, random_state = 0)
+X_train.head()
+
+
+#Standarization(scaled down values to o to 1)
+from sklearn.preprocessing import StandardScaler
+scaler = StandardScaler()
+scaler.fit(X_train)
+X_train = scaler.transform(X_train)
+X_test = scaler.transform(X_test)
+
+#Logistic Regression
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import classification_report,confusion_matrix,accuracy_score
+model = LogisticRegression()
+model.fit(X_train, Y_train)
+y_logistic_pred = model.predict(X_test)
+logistic_re = classification_report(Y_test,y_logistic_pred)
+print(logistic_re)
+
 
