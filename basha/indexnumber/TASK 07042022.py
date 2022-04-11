@@ -208,7 +208,6 @@ for val in df.columns:
     dist_plot(val)
 
 #Transformations
-
 X= df.drop(['Personal Loan'],axis=1)
 y= df['Personal Loan']
 
